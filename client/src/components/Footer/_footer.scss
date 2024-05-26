@@ -1,0 +1,173 @@
+#footer {
+    background-color: $teal_color;
+    padding: 100px 0 0;
+    margin: 50px 0 0;
+
+
+    .footerTop {
+
+        .rowBox {
+            padding: 0 0 50px;
+            @include display_flex;
+            border-bottom: 1px solid $white_color;
+
+            .socialIcon {
+                @include display_flex($j_content: start);
+
+                li {
+                    @include icon($f_weight: 800, $f_size: 18px);
+
+                    &:hover {
+                        @include hover($color: $orange_color, $bg_color: $white_color)
+                    }
+                }
+            }
+
+            .logoBox {
+                text-align: center;
+
+                img {
+                    width: 150px;
+                }
+            }
+
+            .cartBox {
+                text-align: right;
+
+                img {
+
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    .footerMiddle {
+
+        .rowBox {
+            padding: 50px 0;
+            border-bottom: 1px solid $white_color;
+
+            h4 {
+                @include heading_4($color: $white_color, $padding: 0 0 20px)
+            }
+
+            .footerLink1, .footerLink2 {
+                li {
+                    margin: 5px 0;
+
+                    @include display_flex($j_content: start);
+
+                    a {
+                        @include paragraph($padding: 0 0 0 5px, $color: $white_color);
+
+                    }
+
+                    span {
+                        color: $white_color;
+                        @include show_hide($transform: scaleX(0%));
+                        line-height: 10px;
+                        transition: 0.4s;
+                    }
+
+                    &:hover {
+
+                        background-color: $white_color;
+
+                        border-radius: 30px;
+
+                        a {
+                            color: $orange_color;
+                        }
+
+                        span {
+                            @include show_hide($transform: scaleX(100%));
+                            color: $orange_color;
+                            margin-left: 10px;
+                            transition: 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .sheduleBox {
+
+                td,
+                th {
+                    padding: 2.7px 5px;
+
+                    span,
+                    b {
+                        @include paragraph($color: $white_color)
+                    }
+
+                    b {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .contactBox {
+                li {
+                    @include display_flex($j_content: start);
+
+                    span {
+                        @include paragraph($color: $white_color, $padding: 10px 5px 10px, $l_height: 20px);
+
+                        &.icon {
+                            color: $orange_color;
+                        }
+                    }
+                }
+            }
+
+            p {
+                @include paragraph($color: $white_color);
+                margin-bottom: 20px;
+            }
+
+            .formBox {
+                background-color: $white_color;
+                padding: 5px;
+                border-radius: 40px;
+                @include display_flex;
+                flex-wrap: nowrap;
+
+                input {
+                    padding: 5px;
+                    border-radius: 30px 0px 0 30px;
+                    border: 1px solid $orange_color;
+                    width: 100%;
+                    line-height: 28px;
+                }
+
+                button {
+                    @include btn($padding: 6px 10px, $bg_color: $orange_color, $color: $white_color, $margin: 0);
+                    border-radius: 0px 30px 30px 0px;
+
+                    &:hover {
+                        @include hover($bg_color: $white_color, $color: $orange_color);
+                        box-shadow: 0 0 5px 0 rgba($black_color, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBottom {
+        background-color: $orange_color;
+        margin-top: 50px;
+
+        .bottomBox {
+
+            @include display_flex;
+
+            p {
+                @include paragraph($color: $white_color, $padding: 0);
+                padding: 20px 20px;
+
+            }
+        }
+    }
+
+}

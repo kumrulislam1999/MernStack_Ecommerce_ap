@@ -1,0 +1,56 @@
+#register {
+    margin: 100px 0;
+
+    .registerBox {
+        background-color: $orange_color;
+        padding: 50px 30px;
+        border-radius: 50px;
+
+        h3 {
+            @include heading_3($color: $white_color);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .input_group {
+            background-color: $white_color;
+            padding: 5px;
+            border-radius: 30px;
+            margin: 10px 0;
+            @include display_flex;
+            flex-wrap: nowrap;
+
+            label {
+                @include paragraph($padding: 3px 25px, $f_weight: 600, $color: $orange_color);
+                background-color: rgba($orange_color, 0.2);
+                width: 30%;
+                border: 1px solid $teal_color;
+                border-radius: 30px 0 0 30px;
+
+            }
+
+            input {
+                background-color: $white_color;
+                @include paragraph($padding: 3px 10px);
+                border: 1px solid $teal_color;
+                border-radius: 0px 30px 30px 0px;
+                width: 70%;
+
+            }
+
+
+        }
+
+        button {
+            @include btn($bg_color: $white_color, $padding: 10px 35px);
+            margin: 35px auto 0;
+            display: block;
+            border-radius: 30px;
+
+            &:hover {
+                @include hover($bg_color: $orange_color, $color: $white_color);
+                box-shadow: 0 0 15px 3px rgba($white_color, 0.6);
+            }
+        }
+    }
+}

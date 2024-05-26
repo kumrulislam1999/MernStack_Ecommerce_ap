@@ -1,0 +1,295 @@
+#header {
+  background-color: $teal_color;
+  box-shadow: 0 0 2px 0 rgba($black_color, 0.5);
+
+  .headerTop {
+    margin-right: auto;
+    padding: 5px 0;
+
+    .containerBox {
+      background-color: rgba($orange_color, 1);
+      padding: 8px 45px;
+      border-radius: 30px;
+
+      .headerTopLeft {
+        @include display_flex($j_content: start);
+
+        li {
+          border-right: 2px solid $white_color;
+          padding: 5px 15px !important;
+
+          a {
+            @include paragraph($f_weight: 500, $padding: 0, $l_height: 20px, $color: $white_color);
+
+
+
+          }
+
+          &:last-child {
+            border: none;
+          }
+
+          &:hover {
+            @include hover($color: $orange_color, $bg_color: $white_color);
+
+            a {
+              color: $orange_color;
+            }
+          }
+        }
+      }
+
+      .headerTopCenter {
+        margin: 0 auto;
+        text-align: center;
+
+        li {
+
+
+
+          b {
+            @include paragraph($color: $white_color, $f_weight: 600, $l_height: 20px);
+            padding-right: 10px;
+          }
+
+          a {
+            @include paragraph($color: $white_color, $padding: 5px 15px, $f_weight: 500, $l_height: 30px);
+
+            &:hover {
+              @include hover($color: $orange_color, $bg_color: $white_color);
+            }
+          }
+
+        }
+
+
+
+      }
+
+      .headerTopRight {
+        @include display_flex;
+
+        li {
+          border-right: 2px solid $white_color;
+          padding: 5px 15px;
+
+          select {
+            @include paragraph($padding: 0, $f_weight: 500, $l_height: 20px);
+            color: $white_color;
+
+          }
+
+          &:last-child {
+            border: none;
+          }
+
+          &:hover {
+            @include hover($bg_color: $white_color, $color: $orange_color );
+            cursor: pointer;
+
+            select {
+              color: $orange_color;
+              transition: 0.4s;
+              cursor: pointer;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .headerMiddle {
+    background-color: rgba($white_color, 0.1);
+    padding: 5px 0;
+
+    .rowBox {
+      @include display_flex($j_content: space-between);
+      width: 100%;
+
+      .logo {
+        width: 150px;
+      }
+
+      .search_box {
+        background-color: $orange_color;
+        margin: auto;
+        padding: 5px;
+        border-radius: 30px;
+
+        form {
+          @include display_flex($j_content: end);
+          flex-wrap: nowrap !important;
+
+          .input_group {
+            @include display_flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            background-color: $white_color;
+            border-radius: 30px;
+            margin-right: 10px;
+
+            input {
+              padding: 7px 20px;
+              width: 100%;
+            }
+
+            button {
+              @include btn($margin: 0 5px, $padding: 5px 35px, $bg_color: $orange_color, $color: $white_color);
+              border-radius: 30px;
+
+              &:hover {
+                @include hover($bg_color: $white_color, $color: $orange_color);
+                box-shadow: 0 0 5px 0 rgba($black_color, 0.6);
+              }
+            }
+          }
+
+          .icon_box {
+            @include display_flex;
+            width: 40px;
+            height: 40px;
+            background-color: $white_color;
+            border-radius: 30px 30px 30px 0;
+
+
+          }
+
+
+        }
+      }
+
+      #right_menu {
+        @include display_flex($j_content: end);
+
+        li {
+
+          a {
+            @include icon($width: 45px, $height: 45px, $f_weight: 800, $f_size: 18px);
+            @include border($b_color: $orange_color);
+            position: relative;
+            border-radius: 50%;
+            @include display_flex;
+
+            .cart_count {
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(50%, -50%);
+              background-color: $orange_color;
+              color: $white_color;
+              width: 25px;
+              height: 25px;
+              @include display_flex;
+              border-radius: 50%;
+            }
+
+            &:hover {
+              @include hover($color: $orange_color, $bg_color: $white_color)
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .headerBottom {
+    nav {
+      background-color: rgba($teal_color, 1) !important;
+
+      #primary_menu {
+        margin: 0 auto;
+        background-color: rgba($white_color, 0.2);
+        padding: 5px 35px;
+        border-radius: 30px;
+        border: 1px solid $white_color;
+
+        a {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 28px;
+          padding: 10px 25px;
+          color: $white_color;
+          margin: 0 5px;
+          text-transform: uppercase;
+          background-color: rgba($white_color, 0.1);
+          position: relative;
+
+          &::after {
+            @include after_before($width: 0%, $height: 3px, $bg_color: $orange_color, $left: 0, $top: 0px);
+            transition: 0.4s;
+          }
+
+          &::before {
+            @include after_before($width: 0%, $height: 3px, $bg_color: $orange_color, $right: 0, $bottom: 0px);
+            transition: 0.4s;
+
+          }
+
+          &:hover,
+          &.active {
+            @include hover($color: $orange_color, $bg_color: $white_color);
+
+            &::after,
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+
+      }
+
+      .accountHolder {
+        @include border($b_color: $white_color);
+        padding: 2px 40px;
+        background-color: rgba($white_color, 0.1);
+        border-radius: 30px;
+        color: $white_color;
+
+        h4 {
+          @include display_flex;
+
+          span {
+            padding-right: 20px;
+          }
+
+          button {
+            @include icon($width: 70px, $height: 40px, $bg_color: transparent);
+            border: 2px solid $white_color;
+            line-height: 30px;
+
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .dropdown-menu {
+            background-color: rgba($teal_color, 1);
+
+            li {
+              margin: 0px 5px;
+              box-shadow: 0 0 2px 0 rgba($black_color, 0.5);
+
+              a {
+                @include paragraph($padding: 5px 20px, $f_weight: 800);
+                background-color: $white_color;
+                ;
+
+                &:hover {
+                  @include hover($bg_color: $orange_color, $color: $white_color)
+                }
+              }
+
+            }
+          }
+        }
+
+      }
+
+
+    }
+  }
+}

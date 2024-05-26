@@ -1,0 +1,57 @@
+ /* --===== Start Reset Style Here =====-- */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ button,
+ input,
+ textarea,
+ select,
+ option,
+ .form-check {
+     margin: 0;
+     padding: 0;
+     outline: 0;
+     border: none;
+ }
+
+ ol,
+ ul {
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+ }
+
+ a,
+ a:hover {
+     //  font-family: $primary_font;
+     display: inline-block;
+     text-decoration: none;
+     margin: 0;
+ }
+
+ input:focus,
+ input,
+ input:focus,
+ .form-control,
+ button,
+ textarea,
+ textarea:focus,
+ select {
+     border: none;
+     outline: none;
+     background-color: transparent;
+
+ }
+
+ img {
+     max-width: 100%;
+     width: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+ /* --===== End Reset Style Here =====-- */

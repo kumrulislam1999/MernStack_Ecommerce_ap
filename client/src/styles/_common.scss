@@ -1,0 +1,164 @@
+/* ===== Start Heading Code Here ===== */
+
+@mixin heading_1($f_size: 65px, $color: none, $f_weight: 800, $l_height: 75px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+@mixin heading_2($f_size: 40px, $color: none, $f_weight: 800, $l_height: 60px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+@mixin heading_3($f_size: 34px, $color: none, $f_weight: 800, $l_height: 50px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+@mixin heading_4($f_size: 26px, $color: none, $f_weight: 600, $l_height: 40px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+@mixin heading_5($f_size: 22px, $color: none, $f_weight: 600, $l_height: 30px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+@mixin heading_6($f_size: 18px, $color: none, $f_weight: 600, $l_height: 28px, $padding: 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $josefin;
+}
+
+/* ===== End Heading Code Here ===== */
+
+
+
+/* ===== Start Paragraph Code Here ===== */
+@mixin paragraph($f_size: 16px, $color: $p_color, $f_weight: 400, $l_height: 28px, $padding: 10px 0, $margin: 0) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $roboto;
+}
+
+/* ===== End Paragraph Code Here ===== */
+
+
+/* ===== Start Button Code Here ===== */
+@mixin btn($f_size: 16px, $color: $orange_color, $bg_color: $white_color, $f_weight: 600, $l_height: 28px, $padding: 10px 25px, $margin: 5px) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color: $color;
+    background-color: $bg_color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $roboto;
+}
+
+/* ===== End Button Code Here ===== */
+
+/* ===== Start Icon Code Here ===== */
+@mixin icon($f_size: 16px, $color: $white_color, $bg_color: $orange_color, $f_weight: 600, $margin: 5px, $width: 36px, $height: 36px, ) {
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $height;
+    color: $color;
+    background-color: $bg_color;
+    text-align: center;
+    margin: $margin;
+    width: $width;
+    height: $height;
+    font-family: $roboto;
+}
+
+/* ===== End Icon Code Here ===== */
+
+
+/* ===== Start Some Essencial Code Here ===== */
+@mixin hover($color: default, $bg_color: default, $transition: 0.4s) {
+    color: $color;
+    background-color: $bg_color;
+    transition: $transition;
+}
+
+@mixin show_hide($display: default, $transform: default, $transition: 0.4s, $visibility: default) {
+    display: $display;
+    transform: $transform;
+    transition: $transition;
+    visibility: $visibility;
+
+}
+
+@mixin border($b_color: none, $b_width: 1px, $b_style: solid) {
+    border: $b_width $b_style $b_color;
+}
+
+@mixin display_flex($display: flex, $a_item: center, $j_content: center) {
+    display: flex;
+    align-items: $a_item;
+    justify-content: $j_content;
+}
+
+@mixin after_before($content: "", $position: absolute, $inset: default, $top: default, $bottom: default, $right: default, $left: default, $width: default, $height: default, $z_index: default, $bg_color: $orange_color) {
+    content: $content;
+    position: $position;
+    inset: $inset;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    z-index: $z_index;
+    background-color: $bg_color;
+}
+
+@mixin Image_bg($content: "", $position: absolute, $inset: 0, $top: default, $bottom: default, $right: default, $left: default, $width: 100%, $height: 100%, $z_index: default) {
+    content: $content;
+    position: $position;
+    inset: $inset;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    z-index: $z_index;
+}
+
+/* ===== End Some Essencial Code Here ===== */

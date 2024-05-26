@@ -1,0 +1,41 @@
+#adminMenu {
+    background-color: $teal_color;
+    padding: 20px;
+    height: 100%;
+
+    h3 {
+        @include heading_3($color: $white_color);
+        margin-bottom: 25px;
+    }
+
+    .menuList {
+        li {
+            margin: 10px 0;
+
+            a {
+                @include paragraph($color: $orange_color, $padding: 0, $f_size: 18px, $f_weight: 600);
+                background-color: $white_color;
+                width: 100%;
+
+                span {
+                    @include icon($margin: 0, $height: 45px, $width: 45px, $f_size: 22px);
+                    padding: 9px 15px;
+                    margin-right: 15px;
+                }
+
+                &:hover,
+                &.active {
+                    @include hover($bg_color: $orange_color, $color: $white_color);
+
+                    span {
+                        background-color: $white_color;
+                        color: $orange_color;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
